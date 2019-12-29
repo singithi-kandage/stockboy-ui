@@ -1,0 +1,88 @@
+@import "../Variables.scss";
+
+.header {
+  width: 100%;
+  background-color: $primary_light;
+}
+
+.header__content {
+  width: $nav_width;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 0.5em 4em;
+  display: flex;
+}
+
+.container--space-between {
+  justify-content: space-between;
+}
+
+.container--centered {
+  justify-content: center;
+}
+
+.nav {
+  padding: 0;
+  margin: 0;
+}
+
+.nav__menu {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav__menu--width_10 {
+  width: 10vw;
+  margin: 0;
+}
+
+.nav__menu--width_15 {
+  width: 15vw;
+}
+
+.nav__menuItem {
+  font-size: 1em;
+  padding-bottom: 0.25em;
+  color: $text_color;
+  font-family: $nav_font;
+  font-weight: bold;
+  border-bottom: 0.5px solid transparent;
+}
+
+.nav__menuItem--uppercase {
+  text-transform: uppercase;
+}
+
+.nav__menuItem:hover {
+  color: $header_color;
+  border-bottom: 0.5px solid $header_color;
+}
+
+.brand {
+  margin: -2em 3em 0em 3em;
+  width: 4.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary_light;
+}
+
+.brand__img {
+  width: 80%;
+}
+
+.brand__title {
+  margin: 0;
+  font-size: 2em;
+  padding-left: 0.25em;
+  margin-top: -0.25em;
+  font-family: $logo_font;
+  color: $header_color;
+  text-transform: none;
+}

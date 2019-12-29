@@ -1,0 +1,122 @@
+@import "../Variables.scss";
+
+.hero {
+  width: 100%;
+}
+
+.hero__block {
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.hero__image {
+  width: 100%;
+  height: auto;
+}
+
+.hero__block--overlay {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  background-color: rgba($primary_dark, 0.8);
+}
+
+.centered__text {
+  align-self: center;
+  text-align: center;
+  color: white;
+}
+
+.centered__text--small {
+  font-size: 1.2em;
+  font-family: $text_font;
+}
+
+.centered__text--regular {
+  font-size: 2em;
+  font-family: $header_font;
+}
+
+.centered__text--large {
+  font-size: 12em;
+  margin-top: -0.1em;
+  padding-bottom: 0.25em;
+  font-family: $logo_font;
+  text-transform: none;
+}
+
+.extra {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  height: 2 0vh;
+}
+
+.extra__card {
+  display: flex;
+  justify-content: center;
+  width: 25vw;
+  height: 25vh;
+  margin: -5em 1em 5em 1em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 4px 7px 10px $shadow_color;
+  border-radius: 10px;
+}
+
+.extra__card_bullet {
+  background-color: white;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: -2vh;
+  overflow: hidden;
+}
+
+.extra__card_bullet--overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba($primary_medium, 0.7);
+}
+
+#card_1 {
+  background-image: url("../../Assets/img/secondary_1.jpg");
+}
+
+#card_2 {
+  background-image: url("../../Assets/img/secondary_2.jpg");
+}
+
+#card_3 {
+  background-image: url("../../Assets/img/secondary_3.jpg");
+}
+
+.overlay {
+  width: 90%;
+  height: 75%;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $text_color;
+}
+
+.overlay--color_info {
+  background-color: rgba($primary_medium, 0.7);
+}
+
+.overlay__header_text {
+  align-self: center;
+}
+
+.overlay__text {
+  align-self: center;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: $text_font;
+}

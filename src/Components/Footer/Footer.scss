@@ -1,0 +1,33 @@
+@import "../Variables.scss";
+
+.footer {
+  height: auto;
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $primary_dark;
+}
+
+.footer__content {
+  width: $content_width;
+  padding: 3em 0 0 0;
+  margin: 0 auto;
+  display: flex;
+}
+
+.footer__content--space_between {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer__content--center {
+  flex-direction: column;
+}
+
+.footer__content--center > p {
+  padding: 1em 1em 2em 1em;
+  align-self: center;
+  color: silver;
+}
+
