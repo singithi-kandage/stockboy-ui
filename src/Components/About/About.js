@@ -13,7 +13,7 @@ const About = () => {
 
       <section className="section section--color_white">
         <header className="section__header">
-          <h2>Farm to Fork</h2>
+          <h3>Farm to Fork</h3>
         </header>
         <div className="spacer"></div>
         <article className="section__content section__content--left_justified">
@@ -33,7 +33,7 @@ const About = () => {
       {/* Vendors Section */}
       <section className="section section--color_white">
         <header className="section__header">
-          <h2>Boost Your Business</h2>
+          <h3>Boost Your Business</h3>
         </header>
         <div className="spacer"></div>
         <article className="section__content section__content--left_justified">

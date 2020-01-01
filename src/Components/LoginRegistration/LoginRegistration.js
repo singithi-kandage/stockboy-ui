@@ -12,7 +12,10 @@ const LoginRegistration = () => {
         </div>
       </section>
 
-      <section className="section section--color_white">
+      <section
+        className="section section--color_white"
+        style={{ height: "65vh" }}
+      >
         <div className="section__content section__content--divided">
           {/* Login form */}
           <div className="split split--width_50">

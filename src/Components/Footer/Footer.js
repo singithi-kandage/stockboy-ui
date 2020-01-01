@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__content footer__content--space_between">
         {/* Stay Connected column */}
-        <div className="column">
+        <div className="column column--width30">
           <h3 className="column__header">Author</h3>
           <p className="text--silver">Singithi Kandage</p>
           <ul className="column__list">
@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
 
         {/* Navigate column */}
-        <div className="column">
+        <div className="column column--width30">
           <h3 className="column__header">Navigate</h3>
           <ul className="column__list">
             <Link to="/" className="link">
@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
 
         {/* Stay Connected column */}
-        <div className="column">
+        <div className="column column--width30">
           <h3 className="column__header">Stay Connected</h3>
           <form className="form">
             <legend className="form__legend form__legend--light ">

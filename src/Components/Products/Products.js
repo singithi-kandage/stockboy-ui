@@ -1,35 +1,7 @@
 import React from "react";
 
-import "./Products.css";
 import Map from "../Map/Map";
 import card_image from "../../Assets/img/secondary_1.jpg";
-
-const fetch = require("isomorphic-fetch");
-
-class TestMap extends React.PureComponent {
-  componentWillMount() {
-    this.setState({ markers: [] });
-  }
-
-  componentDidMount() {
-    const url = [
-      // Length issue
-      `https://gist.githubusercontent.com`,
-      `/farrrr/dfda7dd7fccfec5474d3`,
-      `/raw/758852bbc1979f6c4522ab4e92d1c92cba8fb0dc/data.json`
-    ].join("");
-
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        this.setState({ markers: data.photos });
-      });
-  }
-
-  render() {
-    return <Map markers={this.state.markers} />;
-  }
-}
 
 const Products = () => {
   return (
@@ -43,38 +15,17 @@ const Products = () => {
       </section>
 
       <section className="section section--color_alert">
-        <div className="section__content">
+        <div className="section__content  section__content--width100">
           <form className="form form--row">
             {/* Column 1 */}
-            <div className="column">
+            <div className="column column--width20">
               <div className="form__group">
-                <select className="select">
-                  <option className="select__option"> -- Category --</option>
-                  <option className="select__option">Fruits</option>
-                  <option className="select__option">Vegetables</option>
-                  <option className="select__option">Meat and Poultry</option>
-                </select>
-              </div>
-              <div className="form__group">
-                <select className="select">
-                  <option className="select__option"> -- Category --</option>
-                  <option className="select__option">Fruits</option>
-                  <option className="select__option">Vegetables</option>
-                  <option className="select__option">Meat and Poultry</option>
-                </select>
+                <input className="input" type="text" placeholder="Keyword" />
               </div>
             </div>
 
             {/* Column 2 */}
-            <div className="column">
-              <div className="form__group">
-                <select className="select">
-                  <option className="select__option"> -- Category --</option>
-                  <option className="select__option">Fruits</option>
-                  <option className="select__option">Vegetables</option>
-                  <option className="select__option">Meat and Poultry</option>
-                </select>
-              </div>
+            <div className="column column--width20">
               <div className="form__group">
                 <select className="select">
                   <option className="select__option"> -- Category --</option>
@@ -86,7 +37,7 @@ const Products = () => {
             </div>
 
             {/* Column 3 */}
-            <div className="column">
+            <div className="column column--width20">
               <div className="form__group">
                 <select className="select">
                   <option className="select__option"> -- Category --</option>
@@ -94,6 +45,30 @@ const Products = () => {
                   <option className="select__option">Vegetables</option>
                   <option className="select__option">Meat and Poultry</option>
                 </select>
+              </div>
+            </div>
+
+            {/* Column 4 */}
+            <div className="column column--width20">
+              <div className="form__group">
+                <select className="select">
+                  <option className="select__option"> -- Category --</option>
+                  <option className="select__option">Fruits</option>
+                  <option className="select__option">Vegetables</option>
+                  <option className="select__option">Meat and Poultry</option>
+                </select>
+              </div>
+            </div>
+
+            {/* Column 5 */}
+            <div className="column column--width20">
+              <div className="form__group">
+                <button className="button button--alert button--full_width">
+                  Search
+                </button>
+                <button className="button button--alert button--full_width">
+                  Reset
+                </button>
               </div>
             </div>
           </form>
@@ -143,7 +118,7 @@ const Products = () => {
 
           {/* Split div */}
           <div className="split split--width_80">
-            <TestMap />
+            <Map />
           </div>
         </div>
       </section>
