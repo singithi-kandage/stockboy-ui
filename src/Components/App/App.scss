@@ -72,11 +72,11 @@ i {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1em;
+  padding: 1em 0;
 }
 
 .section-- .section--color_white {
-  background-color: rgba($primary_light, 0.7);
+  background-color: white;
 }
 
 .section--color_alert {

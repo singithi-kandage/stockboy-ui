@@ -1,6 +1,10 @@
 import React from "react";
 
+import "./Products.css";
+import Map from "../Map/Map";
 import card_image from "../../Assets/img/secondary_1.jpg";
+
+const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
 
 const Products = () => {
   return (
@@ -73,6 +77,7 @@ const Products = () => {
 
       <section className="section section--color_white">
         <div className="section__content section__content--width100">
+          {/* Side menu */}
           <aside className="aside">
             <div className="card_list">
               <div className="card_list__header">Results</div>
@@ -110,6 +115,21 @@ const Products = () => {
               </div>
             </div>
           </aside>
+
+          {/* Split div */}
+          <div className="split split--width_80">
+            <Map
+              isMarkerShown
+              googleMapURL={
+                "https://maps.googleapis.com/maps/api/js?key=" +
+                GOOGLE_MAPS_API_KEY +
+                "&v=3.exp&libraries=geometry,drawing,places"
+              }
+              loadingElement={<div style={{ height: `100%` }} />}
+              containerElement={<div style={{ height: `400px` }} />}
+              mapElement={<div style={{ height: `100%` }} />}
+            />
+          </div>
         </div>
       </section>
     </main>
