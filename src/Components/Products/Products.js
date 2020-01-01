@@ -72,8 +72,9 @@ const Products = () => {
       </section>
 
       <section className="section section--color_white">
-        <div className="section__content">
-          <div className="card_grid">
+        <div className="section__content section__content--width100">
+          {/*
+                    <div className="card_grid">
             <div className="card">
               <div className="card__image">
                 <img src={card_image} alt="card_image" />
@@ -88,13 +89,20 @@ const Products = () => {
             <div className="card"></div>
             <div className="card"></div>
           </div>
+          */}
         </div>
         <div className="pagination">
+          <span className="pagination_link">
+            <i className="fas fa-caret-left"></i>
+          </span>
           <span className="pagination_link">1</span>
           <span className="pagination_link">2</span>
           <span className="pagination_link">3</span>
           <span className="pagination_link">4</span>
           <span className="pagination_link">5</span>
+          <span className="pagination_link">
+            <i className="fas fa-caret-right"></i>
+          </span>
         </div>
       </section>
     </main>

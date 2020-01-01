@@ -62,7 +62,7 @@ i {
 /* Aside */
 .aside {
   width: 20%;
-  height: 40vh;
+  height: auto;
 }
 
 /*Section*/
@@ -72,7 +72,7 @@ i {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1em 0;
+  padding: 1em;
 }
 
 .section-- .section--color_white {
@@ -119,6 +119,7 @@ i {
 }
 
 .section__content--divided {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -139,8 +140,8 @@ i {
   width: 50%;
 }
 
-.split--width_75 {
-  width: 75%;
+.split--width_80 {
+  width: 80%;
 }
 
 /* Form */
@@ -381,7 +382,7 @@ i {
 }
 
 .card {
-  width: 22%;
+  width: 22.5%;
   height: 50vh;
   overflow: hidden;
   padding: 1em;

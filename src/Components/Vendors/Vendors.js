@@ -64,7 +64,7 @@ const Vendors = () => {
           </aside>
 
           {/* Split div */}
-          <div className="split split--width_75">
+          <div className="split split--width_80">
             <span>Results: </span>
           </div>
         </div>
