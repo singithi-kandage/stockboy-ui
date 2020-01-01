@@ -4,7 +4,32 @@ import "./Products.css";
 import Map from "../Map/Map";
 import card_image from "../../Assets/img/secondary_1.jpg";
 
-const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+const fetch = require("isomorphic-fetch");
+
+class TestMap extends React.PureComponent {
+  componentWillMount() {
+    this.setState({ markers: [] });
+  }
+
+  componentDidMount() {
+    const url = [
+      // Length issue
+      `https://gist.githubusercontent.com`,
+      `/farrrr/dfda7dd7fccfec5474d3`,
+      `/raw/758852bbc1979f6c4522ab4e92d1c92cba8fb0dc/data.json`
+    ].join("");
+
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        this.setState({ markers: data.photos });
+      });
+  }
+
+  render() {
+    return <Map markers={this.state.markers} />;
+  }
+}
 
 const Products = () => {
   return (
@@ -76,7 +101,7 @@ const Products = () => {
       </section>
 
       <section className="section section--color_white">
-        <div className="section__content section__content--width100">
+        <div className="section__content section__content--width100 section__content--divided">
           {/* Side menu */}
           <aside className="aside">
             <div className="card_list">
@@ -118,17 +143,7 @@ const Products = () => {
 
           {/* Split div */}
           <div className="split split--width_80">
-            <Map
-              isMarkerShown
-              googleMapURL={
-                "https://maps.googleapis.com/maps/api/js?key=" +
-                GOOGLE_MAPS_API_KEY +
-                "&v=3.exp&libraries=geometry,drawing,places"
-              }
-              loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={<div style={{ height: `400px` }} />}
-              mapElement={<div style={{ height: `100%` }} />}
-            />
+            <TestMap />
           </div>
         </div>
       </section>

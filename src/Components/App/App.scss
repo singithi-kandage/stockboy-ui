@@ -63,6 +63,7 @@ i {
 .aside {
   width: 20%;
   height: auto;
+  padding-left: 1em;
 }
 
 /*Section*/
@@ -134,9 +135,9 @@ i {
 }
 
 .split {
-  width: 50%;
   padding: 0 1em;
   height: auto;
+  overflow: hidden;
 }
 
 .split--width_50 {
