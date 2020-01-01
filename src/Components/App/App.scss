@@ -110,6 +110,10 @@ i {
   margin: 0 auto;
 }
 
+.section__content--width100 {
+  width: 100%;
+}
+
 .section__content--left_justified {
   text-align: left;
 }
@@ -119,7 +123,6 @@ i {
 }
 
 .section__content--divided {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -381,22 +384,54 @@ i {
   flex-wrap: wrap;
 }
 
+.card_list {
+  height: 55vh;
+}
+
+.card_list__header {
+  padding: 0.25em 0.5em;
+  font-family: $text_font;
+  color: $text_color;
+  background-color: rgba($primary_medium, 0.7);
+}
+
+.card_list_body {
+  width: 100%;
+  height: 100%;
+  background-color: rgba($primary_light, 0.2);
+  overflow-y: scroll;
+}
+
+.card_list__trailer {
+  width: 100%;
+  font-family: $text_font;
+  color: $text_color;
+  background-color: rgba($primary_medium, 0.7);
+  display: flex;
+  justify-content: center;
+}
+
 .card {
-  width: 22.5%;
-  height: 50vh;
+  width: 100%;
+  height: 20%;
+  background-color: rgba($primary_medium, 0.2);
+  border-bottom: 1px solid $primary_medium;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   overflow: hidden;
-  padding: 1em;
-  margin: 0.75em 0.5em;
-  background-color: rgba($primary_medium, 0.4);
-  box-shadow: 4px 7px 10px $shadow_color;
   cursor: pointer;
 }
 
 .card__image {
-  width: 100%;
-  height: 85%;
-  background-color: white;
+  width: 20%;
+  padding: 0.5em;
   overflow: hidden;
+}
+
+.card__body {
+  width: 80%;
+  padding: 0.5em;
 }
 
 .card__image > img {
@@ -414,7 +449,6 @@ i {
 /* Pagination */
 .pagination {
   width: 10%;
-  padding: 2em 1em 1em 1em;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -422,7 +456,7 @@ i {
 }
 
 .pagination_link {
-  padding: 0.5em;
+  padding: 0.2em;
   border-bottom: 2px solid transparent;
   cursor: pointer;
 }
@@ -430,4 +464,27 @@ i {
 .pagination_link:hover {
   border-bottom: 2px solid $text_color;
   cursor: pointer;
+}
+
+/*Custom Scroll Bar*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba($primary_light, 0.7);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba($primary_medium, 0.5);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($primary_medium, 0.9);
 }

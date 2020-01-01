@@ -12,7 +12,7 @@ const Vendors = () => {
       </section>
 
       <section className="section section--color_white">
-        <div className="section__content section__content--divided">
+        <div className="section__content section__content--width100 section__content--divided">
           {/* Side Filter Menu */}
           <aside className="aside">
             <div className="form_container form_container--column">
