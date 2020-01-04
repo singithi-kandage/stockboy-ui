@@ -27,7 +27,9 @@ const Header = () => {
             </ul>
           </nav>
         </div>
-        <div className="line line--full_width line--green "></div>
+        <div className="container container--centered">
+          <div className="line line--full_width line--green "></div>
+        </div>
         <div className="container container--centered">
           <nav className="nav">
             <ul className="nav__menu nav__menu--width_15">

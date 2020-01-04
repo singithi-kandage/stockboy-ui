@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
+import "../CSSComponent.scss";
 import "./App.scss";
 
 import Header from "../Header/Header";

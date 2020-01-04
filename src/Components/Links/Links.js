@@ -1,5 +1,5 @@
 import React from "react";
-
+import UnderConstruction from "../UnderConstruction/UnderConstruction";
 const Links = () => {
   return (
     <main>
@@ -10,6 +10,7 @@ const Links = () => {
           <div className="line line--half_width line--brown"></div>
         </div>
       </section>
+      <UnderConstruction />
     </main>
   );
 };
