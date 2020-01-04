@@ -51,7 +51,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  position: relative;
 }
 
 .extra__card {
@@ -124,4 +123,29 @@
   align-self: center;
   text-align: center;
   font-family: $text_font;
+}
+
+/* Mobile phones: */
+@media only screen and (max-width: 768px) {
+  .hero__image {
+    width: auto;
+    height: 100%;
+  }
+
+  .extra {
+    margin: 0;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .extra__card {
+    margin: 1em;
+    width: $content_width;
+    align-self: center;
+  }
+
+  .extra__card_bullet {
+    display: none;
+    visibility: hidden;
+  }
 }

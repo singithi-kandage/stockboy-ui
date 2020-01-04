@@ -2,12 +2,15 @@
 
 .header {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: $primary_light;
 }
 
 .header__content {
   width: $nav_width;
-  margin: 0 auto;
+  align-self: center;
 }
 
 .container {
@@ -52,6 +55,7 @@
   color: $text_color;
   font-family: $nav_font;
   font-weight: bold;
+  text-align: center;
   border-bottom: 0.5px solid transparent;
 }
 
@@ -64,6 +68,30 @@
   border-bottom: 0.5px solid $header_color;
 }
 
+.nav__menuItem--disabled {
+  background-color: none;
+  border: none;
+}
+
+.nav__menuItem--disabled:hover {
+  color: $text_color;
+  border-bottom: 0.5px solid transparent;
+  background-color: none;
+}
+
+/*Collapse Navbar*/
+#collapse_nav {
+  display: none;
+  visibility: hidden;
+}
+
+#bars {
+  color: $header_color;
+  margin-top: 0.3em;
+  font-size: 3em;
+}
+
+/* Brand */
 .brand {
   margin: -2em 3em 0em 3em;
   width: 4.5vw;
@@ -72,6 +100,13 @@
   align-items: center;
   justify-content: center;
   background-color: $primary_light;
+}
+
+.brand--mobile {
+  width: 10vw;
+  margin: 0 auto;
+  display: none;
+  visibility: hidden;
 }
 
 .brand__img {
@@ -86,4 +121,70 @@
   font-family: $logo_font;
   color: $header_color;
   text-transform: none;
+}
+
+/* Mobile phones: */
+@media only screen and (max-width: 768px) {
+  .header__content {
+    width: 100%;
+  }
+
+  .container--centered {
+    flex-direction: column;
+  }
+
+  /* Navbar */
+  .nav__menu {
+    flex-direction: column;
+  }
+
+  .nav__menu--width_15 {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .nav__menuItem {
+    margin-bottom: 0.25em;
+    border: none;
+  }
+
+  .nav__menuItem:hover {
+    border: none;
+    background-color: rgba($primary_medium, 0.7);
+  }
+
+  #contact_link {
+    display: none;
+    visibility: hidden;
+  }
+
+  /* Secondary Navbar */
+  #secondary_nav {
+    display: none;
+    visibility: hidden;
+  }
+
+  /*Collapse Navbar*/
+  #collapse_nav {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Brand */
+  .brand {
+    display: none;
+    visibility: hidden;
+  }
+
+  .brand--mobile {
+    display: block;
+    visibility: visible;
+  }
+
+  .brand__title {
+    margin-top: -0.5em;
+    font-size: 1.5em;
+  }
 }

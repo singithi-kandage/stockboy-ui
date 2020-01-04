@@ -1,20 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Header.scss";
 import logo from "../../Assets/img/logo.png";
 
 const Header = () => {
+  let [isCollapsed, setIsCollapsed] = useState(true);
+
+  const toggleCollapsed = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
   return (
     <header className="header">
       <div className="header__content">
+        {/* Secondary Navbar */}
         <div className="container container--space-between">
-          <span>
-            <i className="fas fa-envelope"></i>singithi.kandage@gmail.com
-          </span>
-
+          {/* Left Side */}
           <nav className="nav">
             <ul className="nav__menu nav__menu--width_10 ">
+              <li className="nav__menuItem">
+                <Link to="/" className="link">
+                  <div className="brand brand--mobile">
+                    <img className="brand__img" src={logo} alt="Logo" />
+                    <h1 className="brand__title">StockBoy</h1>
+                  </div>
+                </Link>
+              </li>
+              <li
+                className="nav__menuItem nav__menuItem--disabled"
+                id="contact_link"
+              >
+                <span>
+                  <i className="fas fa-envelope"></i>singithi.kandage@gmail.com
+                </span>
+              </li>
+            </ul>
+          </nav>
+
+          {/* Right Side */}
+          <nav className="nav" id="secondary_nav">
+            <ul className="nav__menu nav__menu--width_10">
               <li className="nav__menuItem">
                 <Link to="/login-signup" className="link">
                   <i className="fas fa-user-circle"></i>
@@ -26,11 +52,44 @@ const Header = () => {
               </li>
             </ul>
           </nav>
+
+          <nav className="nav" id="collapse_nav">
+            <ul className="nav__menu nav__menu--width_10">
+              <li
+                className="nav__menuItem nav__menuItem--disabled"
+                onClick={() => {
+                  toggleCollapsed();
+                }}
+              >
+                <span>
+                  <i className="fas fa-bars" id="bars"></i>
+                </span>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <div className="container container--centered">
+
+        {/* Navbar Line */}
+        <div
+          className="container container--centered"
+          style={
+            isCollapsed
+              ? { display: "none", visibility: "visible" }
+              : { display: "block", visibility: "visible" }
+          }
+        >
           <div className="line line--full_width line--green "></div>
         </div>
-        <div className="container container--centered">
+
+        {/* Main Navbar */}
+        <div
+          className="container container--centered"
+          style={
+            isCollapsed
+              ? { display: "none", visibility: "visible" }
+              : { display: "block", visibility: "visible" }
+          }
+        >
           <nav className="nav">
             <ul className="nav__menu nav__menu--width_15">
               <Link to="/about" className="link">
