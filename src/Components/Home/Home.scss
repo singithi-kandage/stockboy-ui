@@ -136,6 +136,27 @@
 
 /* Mobile phones: */
 @media only screen and (max-width: 549px) {
+  br {
+    display: none;
+  }
+  .hero__image {
+    width: auto;
+    height: 100%;
+  }
+
+  .centered__text--small {
+    font-size: 1em;
+    padding: 0 2em;
+  }
+
+  .centered__text--regular {
+    font-size: 1em;
+  }
+
+  .centered__text--large {
+    font-size: 7em;
+  }
+
   .extra {
     margin: 0;
     width: 100%;
