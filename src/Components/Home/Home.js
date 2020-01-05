@@ -86,7 +86,6 @@ const Home = () => {
           <h2>Farm to Fork</h2>
           <div className="line line--half_width line--brown"></div>
         </header>
-        <div className="spacer"></div>
         <article className="section__content section__content--centered">
           <p>
             Whether your looking for farm-fresh produce, <br />

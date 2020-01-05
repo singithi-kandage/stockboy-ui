@@ -123,8 +123,20 @@
   text-transform: none;
 }
 
+/* Tablets: */
+@media only screen and (min-width: 550px) and (max-width: 1499px) {
+  .nav__menu--width_15 {
+    width: 30vw;
+  }
+
+  /* Brand */
+  .brand {
+    width: 10vw;
+  }
+}
+
 /* Mobile phones: */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 549px) {
   .header__content {
     width: 100%;
   }
