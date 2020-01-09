@@ -15,8 +15,8 @@ const Vendors = () => {
         <div className="section__content section__content--width100 section__content--divided">
           {/* Side Filter Menu */}
           <aside className="aside">
-            <div className="form_container form_container--column">
-              <header className="form_container__header form_container__header--color_alert">
+            <div className="form_container form_container--column form_container--color_info">
+              <header className="form_container__header form_container__header--color_info">
                 Search Filter
               </header>
               <form className="form">

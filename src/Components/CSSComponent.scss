@@ -144,11 +144,11 @@ i {
 .form_container {
   display: flex;
   justify-content: center;
-  padding-bottom: 2em;
-  background-color: rgba($primary_medium, 0.2);
   box-shadow: 4px 7px 10px $shadow_color;
+  border-radius: 10px;
   overflow: hidden;
   text-align: center;
+  align-self: center;
 }
 
 .form_container--column {
@@ -159,24 +159,32 @@ i {
   flex-direction: row;
 }
 
+.form_container--color_info {
+  background-color: rgba($primary_medium, 0.2);
+}
+
+.form_container--color_alert {
+  background-color: rgba($button_alert_color, 0.5);
+}
+
 .form_container__header {
   padding: 0.5em 0;
-  margin-bottom: 1em;
   font-family: $text_font;
   color: $text_color;
 }
 
 .form_container__header--color_info {
-  background-color: rgba($primary_medium, 0.2);
+  background-color: rgba($primary_medium, 0.7);
 }
 
 .form_container__header--color_alert {
-  background-color: rgba($button_info_color, 0.7);
+  background-color: rgba($button_alert_color, 0.7);
 }
 
 .form {
   width: 80%;
   align-self: center;
+  padding: 1em;
 }
 
 .form--row {
@@ -248,11 +256,15 @@ i {
   color: grey;
 }
 
+/* Table */
+
+
+
 /* Buttons */
 
 .button {
   margin: 0.5em;
-  padding: 0.9em 0.5em;
+  padding: 1em 0.5em;
   text-transform: uppercase;
   font-family: $text_font;
   font-weight: bold;
@@ -265,7 +277,7 @@ i {
 
 .button--half_width {
   width: 50%;
-  max-width: 10vw;
+  max-width: 12vw;
 }
 
 .button--default {

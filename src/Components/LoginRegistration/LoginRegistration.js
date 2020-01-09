@@ -19,7 +19,7 @@ const LoginRegistration = () => {
         <div className="section__content section__content--divided">
           {/* Login form */}
           <div className="split split--width_50">
-            <div className="form_container form_container--column">
+            <div className="form_container form_container--column form_container--color_alert">
               <header className="form_container__header form_container__header--color_alert">
                 Login
               </header>
@@ -43,7 +43,7 @@ const LoginRegistration = () => {
 
           {/* Registration form */}
           <div className="split split--width_50">
-            <div className="form_container form_container--column">
+            <div className="form_container form_container--column form_container--color_alert">
               <header className="form_container__header form_container__header--color_alert">
                 Register
               </header>

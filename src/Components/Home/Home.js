@@ -32,14 +32,16 @@ const Home = () => {
           </div>
           <div className="extra__card_content" id="card_1">
             <div className="overlay overlay--color_info">
-              <h2 className="overlay__header_text">Fresh and Local</h2>
-              <span className="overlay__text">
-                We pride ourselves on beign able to bring fresh, local fruits
-                and vegetables to your table.
-              </span>
-              <button className="button button--alert button--half_width">
-                Check it out
-              </button>
+              <div className="overlay__content">
+                <h2 className="overlay__header_text">Fresh and Local</h2>
+                <span className="overlay__text">
+                  We pride ourselves on beign able to bring fresh, local fruits
+                  and vegetables to your table.
+                </span>
+                <button className="button button--alert button--half_width">
+                  Check it out
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -49,14 +51,16 @@ const Home = () => {
           </div>
           <div className="extra__card_content" id="card_2">
             <div className="overlay overlay--color_info">
-              <h2 className="overlay__header_text">Organic and Free Range</h2>
-              <span className="overlay__text">
-                Organic, grass-fed, or free range meat and poultry, seven days a
-                week.
-              </span>
-              <button className="button button--alert button--half_width">
-                Check it out
-              </button>
+              <div className="overlay__content">
+                <h2 className="overlay__header_text">Organic and Free Range</h2>
+                <span className="overlay__text">
+                  Organic, grass-fed, or free range meat and poultry, seven days
+                  a week.
+                </span>
+                <button className="button button--alert button--half_width">
+                  Check it out
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -66,14 +70,16 @@ const Home = () => {
           </div>
           <div className="extra__card_content" id="card_3">
             <div className="overlay overlay--color_info">
-              <h2 className="overlay__header_text">Meet our vendors</h2>
-              <span className="overlay__text">
-                Find out more about the amazing suppliers and vendors who we
-                work with.
-              </span>
-              <button className="button button--alert button--half_width">
-                Check it out
-              </button>
+              <div className="overlay__content">
+                <h2 className="overlay__header_text">Meet our vendors</h2>
+                <span className="overlay__text">
+                  Find out more about the amazing suppliers and vendors who we
+                  work with.
+                </span>
+                <button className="button button--alert button--half_width">
+                  Check it out
+                </button>
+              </div>
             </div>
           </div>
         </div>
