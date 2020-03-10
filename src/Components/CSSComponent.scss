@@ -257,8 +257,21 @@ i {
 }
 
 /* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
+.thead {
+  background-color: rgba($primary_medium, 0.7);
+}
 
+.th {
+  padding: 1em;
+}
+
+.row {
+}
 
 /* Buttons */
 
@@ -397,25 +410,57 @@ i {
   flex-wrap: wrap;
 }
 
-.card_list {
+.card_grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 20%;
+  height: 30vh;
+  overflow: hidden;
+  padding: 1em;
+  margin: 0.75em 0.5em;
+  background-color: rgba($primary_medium, 0.4);
+  box-shadow: 4px 7px 10px $shadow_color;
+  cursor: pointer;
+}
+
+.card__image {
+  width: 100%;
+  height: 75%;
+  background-color: white;
+  overflow: hidden;
+}
+
+.card__image > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Lists */
+
+.list {
   height: 65vh;
 }
 
-.card_list__header {
+.list__header {
   padding: 0.25em 0.5em;
   font-family: $text_font;
   color: $text_color;
   background-color: rgba($primary_medium, 0.7);
 }
 
-.card_list_body {
+.list_body {
   width: 100%;
   height: 90%;
   background-color: rgba($primary_light, 0.2);
   overflow-y: scroll;
 }
 
-.card_list__trailer {
+.list__trailer {
   width: 100%;
   font-family: $text_font;
   color: $text_color;
@@ -424,7 +469,7 @@ i {
   justify-content: center;
 }
 
-.card {
+.list_item {
   width: 100%;
   height: 20%;
   background-color: rgba($primary_medium, 0.2);
@@ -436,25 +481,25 @@ i {
   cursor: pointer;
 }
 
-.card__image {
+.list_item__image {
   width: 30%;
   padding: 0.5em;
   overflow: hidden;
 }
 
-.card__body {
+.list_item__body {
   width: 80%;
   padding: 0.5em;
 }
 
-.card__image > img {
+.list_item__image > img {
   width: 100%;
   height: 100%;
 }
 
-.card__product_name,
-.card__vendor,
-.card__price {
+.list_item__product_name,
+.list_item__vendor,
+.list_item__price {
   text-transform: none;
   padding: 0.1em 0;
 }
@@ -462,10 +507,10 @@ i {
 /* Pagination */
 .pagination {
   width: 10%;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-self: center;
 }
 
 .pagination_link {

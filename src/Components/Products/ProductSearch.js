@@ -2,7 +2,8 @@ import React, { Fragment } from "react";
 import { connect } from "react-redux";
 
 import Map from "../Map/Map";
-import card_image from "../../Assets/img/secondary_1.jpg";
+import Pagination from "../Pagination/Pagination";
+import image from "../../Assets/img/secondary_1.jpg";
 
 const ProductSearch = () => {
   return (
@@ -73,39 +74,29 @@ const ProductSearch = () => {
         <div className="section__content section__content--width100 section__content--divided">
           {/* Side menu */}
           <aside className="aside">
-            <div className="card_list">
-              <div className="card_list__header">Results</div>
-              <div className="card_list_body">
-                <div className="card">
-                  <div className="card__image">
-                    <img src={card_image} alt="card_image" />
+            <div className="list">
+              <div className="list__header">Results</div>
+              <div className="list_body">
+                <div className="list_item">
+                  <div className="list_item__image">
+                    <img src={image} alt="Product Image" />
                   </div>
-                  <div className="card__body">
-                    <h3 className="card__product_name">Sugar Pie Pumpkin</h3>
-                    <p className="card__vendor">Robby's Farm</p>
-                    <p className="card__price">$2.99/lb</p>
+                  <div className="list_item__body">
+                    <h3 className="list_item__product_name">
+                      Sugar Pie Pumpkin
+                    </h3>
+                    <p className="list_item__vendor">Robby's Farm</p>
+                    <p className="list_item__price">$2.99/lb</p>
                   </div>
                 </div>
-                <div className="card"></div>
-                <div className="card"></div>
-                <div className="card"></div>
-                <div className="card"></div>
-                <div className="card"></div>
+                <div className="list_item"></div>
+                <div className="list_item"></div>
+                <div className="list_item"></div>
+                <div className="list_item"></div>
+                <div className="list_item"></div>
               </div>
-              <div className="card_list__trailer">
-                <div className="pagination">
-                  <span className="pagination_link">
-                    <i className="fas fa-caret-left"></i>
-                  </span>
-                  <span className="pagination_link">1</span>
-                  <span className="pagination_link">2</span>
-                  <span className="pagination_link">3</span>
-                  <span className="pagination_link">4</span>
-                  <span className="pagination_link">5</span>
-                  <span className="pagination_link">
-                    <i className="fas fa-caret-right"></i>
-                  </span>
-                </div>
+              <div className="list__trailer">
+                <Pagination />
               </div>
             </div>
           </aside>
@@ -120,9 +111,4 @@ const ProductSearch = () => {
   );
 };
 
-export default connect(
-    state => ({
-    }),
-    {  }
-  )(ProductSearch);
-  
+export default connect(state => ({}), {})(ProductSearch);
